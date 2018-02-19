@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="card-element">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `card-element`
+     * It is used to create cards with less effort
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class CardElement extends Polymer.Element {
+      static get is() { return 'card-element'; }
+      static get properties() {
+        return {
+          name: {
+            type: String,
+            value: 'card-element'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(CardElement.is, CardElement);
+  </script>
+</dom-module>
